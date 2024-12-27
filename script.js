@@ -73,15 +73,3 @@ init();
 
 // Add event listener to the Mark Attendance button
 document.getElementById('markAttendance').addEventListener('click', markAttendance);
-
-navigator.mediaDevices.getUserMedia({ video: true })
-    .then((stream) => {
-        console.log('Webcam access granted');
-        const video = document.createElement('video');
-        video.srcObject = stream;
-        video.play();
-        document.body.appendChild(video);
-    })
-    .catch((error) => {
-        console.error('Webcam access denied', error);
-    });
